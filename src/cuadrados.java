@@ -14,8 +14,8 @@ public class cuadrados {
         double x; // iterador
         double raiz;
         // variables del resultado
-        double numero1;
-        double numero2;
+        double numero1=0;
+        double numero2=0;
 
         Scanner sc=new Scanner(System.in);
 
@@ -33,12 +33,18 @@ public class cuadrados {
                 numero1=n;
                 numero2=raiz;
 
-                System.out.printf("Los numeros son %.1f y %.1f",numero1,numero2);
+                System.out.printf("Los numeros son %.1f y %.1f%n",numero1,numero2);
             }
             n++; // incremento de n
+            
 
 
         }while((numero-x)>0);
+
+        if (numero1==0)
+        {
+            System.out.println("No se han encontrado valores ");
+        }
 
         sc.close(); // cerramos el Scanner
     }

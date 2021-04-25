@@ -10,6 +10,7 @@ public class cuadrados {
 
         double numero; // valor del numero a descomponer en la suma de cuadrados
         long n=2; // numeros buscados
+        int contador=0; // contador de numeros
 
         double x; // iterador
         double raiz;
@@ -32,6 +33,7 @@ public class cuadrados {
             {
                 numero1=n;
                 numero2=raiz;
+                contador++; 
 
                 System.out.printf("Los numeros son %.1f y %.1f%n",numero1,numero2);
             }
@@ -39,7 +41,7 @@ public class cuadrados {
             
 
 
-        }while((numero-x)>0);
+        }while((numero1<=numero2)||(contador<2));
 
         if (numero1==0)
         {

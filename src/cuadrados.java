@@ -9,7 +9,7 @@ public class cuadrados {
     public static void main(String[] args) {
 
         double numero; // valor del numero a descomponer en la suma de cuadrados
-        long n=2; // numeros buscados
+        long n=1; // numeros buscados
         int contador=0; // contador de numeros
 
         double x; // iterador
@@ -41,7 +41,7 @@ public class cuadrados {
             
 
 
-        }while((numero1<=numero2)||(contador<2));
+        }while((numero1<=numero2)&&(contador<2));
 
         if (numero1==0)
         {

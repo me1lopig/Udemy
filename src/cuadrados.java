@@ -37,16 +37,17 @@ public class cuadrados {
 
                 System.out.printf("Los numeros son %.1f y %.1f%n",numero1,numero2);
             }
+            if (numero-x<0)
+            {   System.out.println("Se ha llegado al tope");
+                System.out.println("No se han encontrado valores de suma de cuadrados");
+                break;
+            }
             n++; // incremento de n
             
 
 
         }while((n!=numero2)&&(contador<2));
 
-        if (numero1==0)
-        {
-            System.out.println("No se han encontrado valores de suma de cuadrados");
-        }
 
         sc.close(); // cerramos el Scanner
     }

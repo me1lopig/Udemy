@@ -23,7 +23,7 @@ public class cuadrados {
         System.out.println("Introducir el mumero ");
         numero=sc.nextDouble();
 
-        System.out.println("El numero es "+numero);
+        System.out.printf("El numero es %.0f %n",numero);
 
         do{
             x=Math.pow(n,2);
@@ -35,7 +35,7 @@ public class cuadrados {
                 numero2=raiz;
                 contador++; 
 
-                System.out.printf("Los numeros son %.1f y %.1f%n",numero1,numero2);
+                System.out.printf("Los numeros son %.0f y %.0f%n",numero1,numero2);
             }
             if (numero-x<0)
             {   System.out.println("Se ha llegado al tope");

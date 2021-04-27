@@ -29,7 +29,7 @@ public class cuadrados {
             x=Math.pow(n,2);
             raiz=Math.sqrt(numero-x);
 
-            if(raiz==(int)raiz)
+            if(raiz==(long)raiz)
             {
                 numero1=n;
                 numero2=raiz;
@@ -41,7 +41,7 @@ public class cuadrados {
             
 
 
-        }while((numero1<=numero2)&&(contador<2));
+        }while((n=!numero2)&&(contador<2));
 
         if (numero1==0)
         {

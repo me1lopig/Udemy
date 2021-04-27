@@ -41,11 +41,11 @@ public class cuadrados {
             
 
 
-        }while((n=!numero2)&&(contador<2));
+        }while((n!=numero2)&&(contador<2));
 
         if (numero1==0)
         {
-            System.out.println("No se han encontrado valores ");
+            System.out.println("No se han encontrado valores de suma de cuadrados");
         }
 
         sc.close(); // cerramos el Scanner

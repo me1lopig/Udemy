@@ -1,6 +1,6 @@
 public class Cadenas_1 {
 // uso elemental de cadenas en Java
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         String nombre="Juan";
 
         System.out.println("Mi nombre es "+" "+nombre);

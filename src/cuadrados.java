@@ -8,7 +8,7 @@ public class cuadrados {
     
     public static void main(String[] args) {
 
-        double numero; // valor del numero a descomponer en la suma de cuadrados
+        double numero; // valor del numero a descomponer en la suma de cuadrados 
         long n=1; // numeros buscados
         int contador=0; // contador de numeros
 
@@ -50,9 +50,6 @@ public class cuadrados {
 
         sc.close(); // cerramos el Scanner
     }
-
-
-
 
 
 }

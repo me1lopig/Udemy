@@ -23,7 +23,7 @@ public class cuadrados {
         System.out.println("Introducir el mumero ");
         numero=sc.nextDouble();
 
-        System.out.printf("El numero es %.0f %n",numero);
+        System.out.printf("Descomposición del  numero %.0f en suma de cuadrados %n",numero);
 
         do{
             x=Math.pow(n,2);
@@ -38,7 +38,7 @@ public class cuadrados {
                 System.out.printf("Los numeros son %.0f y %.0f%n",numero1,numero2);
             }
             if (numero-x<0)
-            {   System.out.printf("No se han encontrado valores de suma de cuadrados para el número %.0f%n",numero);
+            {   System.out.println("No se han encontrado valores de suma de cuadrados para este número");
                 break;
             }
             n++; // incremento de n

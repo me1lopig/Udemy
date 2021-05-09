@@ -1,6 +1,6 @@
 
 // buscamos numeros naturales que se puedas expresar por sumas de cuadrados diferentes
-
+package es.udemy.calculos; // referencia del paquete de Java
 
 import java.util.Scanner;
 

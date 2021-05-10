@@ -1,3 +1,4 @@
+package es.udemy.entrada;
 public class Cadenas_1 {
 // uso elemental de cadenas en Java
     public static void main(String[] args) {

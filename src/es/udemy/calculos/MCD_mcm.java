@@ -2,7 +2,7 @@
 package es.udemy.calculos;
 
 import java.util.Scanner;
-import java.lang.Math;
+
 
 public class MCD_mcm {
     public static void main(String[] args) {

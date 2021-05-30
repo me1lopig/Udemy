@@ -47,7 +47,7 @@ public class MCD_mcm {
         System.out.printf("El MCD de %d y %d es %d%n",numero1,numero2,menor);
         
         // calculo de mínimo común multiplo mcm
-        System.out.printf("El mcm de %d y %d es %d%n",numero1,numero2,Math.abs(numero1-numero2)/menor);
+        System.out.printf("El mcm de %d y %d es %d%n",numero1,numero2,Math.abs(numero1*numero2)/menor);
 
         sc.close(); // cerramos el Scanner
     }

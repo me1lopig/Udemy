@@ -45,15 +45,15 @@ public class segundoGrado {
         // soluciones complejas
             // parte real de las soluciones
             x1=-b/(2*a);
-            x2=(-b-Math.sqrt(discriminante))/(2*a);
+            x2=x1;
             // parte imaginaria de las soluciones
-            x1imag=0;
-            x2imag=0;
-
-
-
-
+            x1imag=Math.sqrt(Math.abs(discriminante))/(2*a);
+            x2imag=-x1imag;
         }
+
+        System.out.println("Las soluciones son: ");
+        System.out.printf("x1= %.3f+%.3fj%n",x1,x1imag);
+        System.out.printf("x2= %.3f+%.3fj%n",x2,x2imag);
 
         sc.close(); // cerramos el Scanner
 

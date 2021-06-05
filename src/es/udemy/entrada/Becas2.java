@@ -16,6 +16,8 @@ public class Becas2 {
         distancia=Integer.parseInt(JOptionPane.showInputDialog("Introduce la distancia al colegio [km]"));
         numeroHermanos=Integer.parseInt(JOptionPane.showInputDialog("Introduce el número de hermanos en el centro"));
         renta=Double.parseDouble(JOptionPane.showInputDialog("Introduce la renta familiar[€]"));
+    
+
 
         // evaluación de concesión de beca 
         // en este caso con solo cumplir uno de los requisitos se concede
@@ -31,6 +33,7 @@ public class Becas2 {
         System.out.println("Distancia al colegio "+distancia+" km");
         System.out.println("Número de hermanos en el colegio "+numeroHermanos);
         System.out.println("Renta familiar "+renta+" €");
+        JOptionPane.showMessageDialog(null,"Distancia al colegio");
 
     }
     

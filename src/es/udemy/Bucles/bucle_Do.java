@@ -1,9 +1,6 @@
 // ejemplo de uso de cadenas 
 // no hay que poner Do While no le veo sentido
 
-
-
-
 package es.udemy.Bucles;
 
 

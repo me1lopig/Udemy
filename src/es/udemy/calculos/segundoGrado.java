@@ -13,8 +13,10 @@ public class segundoGrado {
         double b ;
         double c;
         double discriminante;
-        double x1,x2; //soluciones de la ecuación parte real
-        double x1imag,x2imag;  // soluciones de la ecuación parte imaginaria
+        double x1;
+        double x2; //soluciones de la ecuación parte real
+        double x1imag;
+        double x2imag;  // soluciones de la ecuación parte imaginaria
 
         Scanner sc=new Scanner(System.in);
 

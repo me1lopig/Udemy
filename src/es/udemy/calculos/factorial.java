@@ -17,11 +17,13 @@ public class factorial {
         numero=sc.nextLong();
 
         // Calculo del valor del factorial
+        
         for(long i=1;i<=numero;i++){
             factorial*=i;      
         }
 
-        sc.close();
+        sc.close(); // cerramos el Scanner
+
     System.out.println("El valor del factorial de "+numero+" es "+factorial);
 
     }

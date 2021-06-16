@@ -29,10 +29,10 @@ public class comprobarCorrreo {
     
     // comprobación de la estrcutura del texto del correo
     if (arrobas==1 && puntos==1 && correo.length()>=4){
-        System.out.println("El correo parece correcto");
+        System.out.println("El correo "+correo+" parece correcto");
     }
     else{
-        System.out.println("El correo no es correcto");
+        System.out.println("El correo "+correo+"  no es correcto");
     }
 
 

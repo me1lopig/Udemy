@@ -35,8 +35,6 @@ public class comprobarCorrreo {
         System.out.println("El correo "+correo+"  no es correcto");
     }
 
-
-
     }
     
 }

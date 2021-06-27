@@ -30,6 +30,13 @@ public class sucursal {
         return ciudad;
     }
 
+    public static float calculaPrecio(paquete paquete1){
+        float precio=paquete1.peso*15;
+        if(paquete1.prioridad==1){
+            precio+=10;
+        }
+        else if (paquete.prioridad==2) precio+=15;
 
+    }
 
 }

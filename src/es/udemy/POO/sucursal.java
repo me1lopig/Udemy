@@ -8,7 +8,7 @@ public class sucursal {
 
     
     public sucursal(long numeroSucursal, String direccion,String ciudad){
-        // constructor 
+        // constructor que establece los valores de los atributos
         this.numeroSucursal=numeroSucursal;
         this.direccion=direccion;
         this.ciudad=ciudad;
@@ -30,12 +30,15 @@ public class sucursal {
         return ciudad;
     }
 
-    public static float calculaPrecio(paquete paquete1){
-        float precio=paquete1.peso*15;
-        if(paquete1.prioridad==1){
+    public double calculaPrecio(paquete paquete1){
+        // se introduce el precio y la prioridad del envío
+        // el precio se calcula en función del peso del paquete
+        double precio=paquete1.getPeso(); 
+        if(paquete1.getPrioridad()==1){
             precio+=10;
         }
-        else if (paquete.prioridad==2) precio+=15;
+        else if (paquete1.getPrioridad()==2) precio+=20;
+        return precio;
 
     }
 

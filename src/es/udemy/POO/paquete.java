@@ -4,13 +4,13 @@ package es.udemy.POO;
 
 public class paquete {
 
-    private String refEnvio;
+    private int refEnvio;
     private double peso;
     private String dni;
-    private byte prioridad; //valores 0, 1, 2
+    private int prioridad; //valores 0, 1, 2
 
 
-    public paquete(String refEnvio,float peso,String dni,byte prioridad){
+    public paquete(int refEnvio,float peso,String dni,int prioridad){
         // metodo constructor
         this.refEnvio=refEnvio;
         this.peso=peso;
@@ -26,7 +26,7 @@ public class paquete {
         else System.out.println("El valor del peso "+peso+" es incorrecto, se mantiene el inicial");   
     }
     
-    public void setPrioridad(byte prioridad){
+    public void setPrioridad(int prioridad){
         // modificación de la prioridad
         // se compruba que sea correcta
         if(prioridad==0||prioridad==1||prioridad==2) this.prioridad=prioridad;
@@ -38,7 +38,7 @@ public class paquete {
         return peso;
     }
 
-    public byte getPrioridad(){
+    public int getPrioridad(){
         // retorno de la prioridad
         return prioridad;
     }

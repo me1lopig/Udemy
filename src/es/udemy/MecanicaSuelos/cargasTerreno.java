@@ -40,5 +40,16 @@ public class cargasTerreno {
         return q*(primerTermino+Math.atan(segundoTermino))/(4*Math.PI);
         
     }  
+
+
+    public double get_tensionRectangularZ(double z){
+        // calculo  de la tensión normal por métodos elásticos
+        double r1=Math.sqrt(B*B+z*z);
+        double r2=Math.sqrt(L*L+z*z);
+        double r=Math.sqrt(B*B+L*L+z*z);
+
+        return q*(Math.atan(B*L/(z*r))+(1/r)*B*L*z*(1/Math.pow(r1, 2)+1/Math.pow(r2,2)))/(2*Math.PI);
+
+    }
     
 }

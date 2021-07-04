@@ -14,7 +14,7 @@ public class cargasTerreno {
     private double L;
     // valor de la carga
     private double q; 
-    // prpfundidad de calculo
+
 
     public cargasTerreno(double B, double L,double q){
         //Constructor asignacion de los valores de la geometroa dela zapata
@@ -31,13 +31,14 @@ public class cargasTerreno {
         double primerTermino;
         double segundoTermino;
 
-        primerTermino=2*m*n*Math.sqrt(m*m+n*n+1)*(m*m+n*n+1)/((m*m+n*n+m*m*n*n+1)*(m*m+n*n+1));
-        segundoTermino=2*m*m*Math.sqrt(m*m+n*n+1)/(m*m+n*n+1-m*m*n*n);
-        if (segundoTermino<1){
-            segundoTermino=Math.PI-(2*m*n+Math.sqrt(m*m+n*n+1)/(m*m+n*n+1-m*m*n*n));
+        primerTermino=2*m*n*Math.sqrt(m*m+n*n+1)*(m*m+n*n+2)/((m*m+n*n+m*m*n*n+1)*(m*m+n*n+1));
+        segundoTermino=2*m*n*Math.sqrt(m*m+n*n+1)/(m*m+n*n+1-m*m*n*n);
+        if (segundoTermino<0){ 
+            // corrección por término negativo
+            segundoTermino=Math.PI-2*m*n*Math.sqrt(m*m+n*n+1)/(m*m+n*n+1-m*m*n*n);
         }
-
-        return q*(primerTermino+Math.atan(segundoTermino));
+        // valor de la tensión a la profundidad z
+        return q*(primerTermino+Math.atan(segundoTermino))/(4*Math.PI);
         
     }
     

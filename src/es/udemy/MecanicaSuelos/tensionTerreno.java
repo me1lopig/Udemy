@@ -18,7 +18,7 @@ public class tensionTerreno {
         double z; // cota de calculo
         double incremento; // incremento del calculo de cada tension
  
-
+        
         System.out.println("Entrada de datos de la cimentación");
         System.out.println("En las entradas decimales usar coma decimal");
     
@@ -46,7 +46,7 @@ public class tensionTerreno {
         do{ // bucle para salida de datos
             System.out.printf("El valor de la carga a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangular(z));
             z+=incremento;
-        }while (zmax>z);
+        }while (zmax+incremento>=z);
 
         entrada.close(); // cerramos la entrada de datos
 

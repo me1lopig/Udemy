@@ -23,7 +23,6 @@ public class cargasTerreno {
         this.q=q;
     }
 
-
     public double getTensionRectangular(double z){
         // se introduce el valor de z
         double m=B/z;
@@ -40,7 +39,6 @@ public class cargasTerreno {
         // valor de la tensión a la profundidad z
         return q*(primerTermino+Math.atan(segundoTermino))/(4*Math.PI);
         
-    }
-    
+    }  
     
 }

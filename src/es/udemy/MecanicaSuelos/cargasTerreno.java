@@ -34,7 +34,7 @@ public class cargasTerreno {
         segundoTermino=2*m*n*Math.sqrt(m*m+n*n+1)/(m*m+n*n+1-m*m*n*n);
         if (segundoTermino<0){ 
             // corrección por término negativo
-            segundoTermino=Math.PI-2*m*n*Math.sqrt(m*m+n*n+1)/(m*m+n*n+1-m*m*n*n);
+            segundoTermino=Math.PI-segundoTermino;
         }
         // valor de la tensión a la profundidad z
         return q*(primerTermino+Math.atan(segundoTermino))/(4*Math.PI);
@@ -42,7 +42,7 @@ public class cargasTerreno {
     }  
 
 
-    public double get_tensionRectangularZ(double z){
+    public double getTensionRectangularZ(double z){
         // calculo  de la tensión normal por métodos elásticos
         double r1=Math.sqrt(B*B+z*z);
         double r2=Math.sqrt(L*L+z*z);
@@ -51,5 +51,22 @@ public class cargasTerreno {
         return (q/(2*Math.PI))*(Math.atan(L*B/(z*r))+(L*B*z/r)*(1/(r1*r1)+1/(r2*r2)));
 
     }
+
+    public double getTensionRectangularX(double z){
+        // calculo  de la tensión normal por métodos elásticos
+        double r1=Math.sqrt(B*B+z*z);
+        double r=Math.sqrt(B*B+L*L+z*z);
+
+        return (q/(2*Math.PI))*(Math.atan(L*B/(z*r))-L*B*z/(r1*r1*r));
+    }
+
+    public double getTensionRectangularY(double z){
+        // calculo  de la tensión normal por métodos elásticos
+        double r2=Math.sqrt(L*L+z*z);
+        double r=Math.sqrt(B*B+L*L+z*z);
+
+        return (q/(2*Math.PI))*(Math.atan(L*B/(z*r))-L*B*z/(r2*r2*r));
+    }
+
     
 }

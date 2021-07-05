@@ -48,7 +48,7 @@ public class cargasTerreno {
         double r2=Math.sqrt(L*L+z*z);
         double r=Math.sqrt(B*B+L*L+z*z);
 
-        return q*(Math.atan(B*L/(z*r))+(1/r)*B*L*z*(1/Math.pow(r1, 2)+1/Math.pow(r2,2)))/(2*Math.PI);
+        return (q/(2*Math.PI))*(Math.atan(L*B/(z*r))+(L*B*z/r)*(1/(r1*r1)+1/(r2*r2)));
 
     }
     

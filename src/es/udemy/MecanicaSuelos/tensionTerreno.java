@@ -44,10 +44,12 @@ public class tensionTerreno {
         cargasTerreno carga1=new cargasTerreno(B, L, q);
 
         do{ // bucle para salida de datos
-            System.out.println("Primer método");
-            System.out.printf("El valor de la carga a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangular(z));
-            System.out.println("Segundo método");
-            System.out.printf("El valor de la carga a la profundidad z=%.3f m es %.3f \n",z,carga1.get_tensionRectangularZ(z));
+            //System.out.println("Primer método");
+            //System.out.printf("El valor de la carga a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangular(z));
+            //System.out.println("Segundo método");
+            System.out.printf("El valor de la carga en z a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularZ(z));
+            System.out.printf("El valor de la carga en x a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularX(z));
+            System.out.printf("El valor de la carga en y a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularY(z));
             z+=incremento;
         }while (zmax+incremento>=z);
 

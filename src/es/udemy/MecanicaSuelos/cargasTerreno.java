@@ -1,5 +1,4 @@
-// clase de cargas transmitidas al terreno por distintos tipos de cimenataciones
-// incluye los tipos
+// clase de cargas transmitidas al terreno para cimentaciones rectangulares
 // tensiones verticales de una carga rectangular calculo en el borde del rectangulo BxL
 // B es el dado menor
 // L es el lado mayor
@@ -13,7 +12,11 @@ public class cargasTerreno {
     private double B;
     private double L;
     // valor de la carga
-    private double q; 
+    private double q;
+    // profundidad de cálculo
+    private double z;
+
+
 
 
     public cargasTerreno(double B, double L,double q){
@@ -21,6 +24,14 @@ public class cargasTerreno {
         this.B=B;
         this.L=L;
         this.q=q;
+    }
+
+    public cargasTerreno(double B, double L,double q,double z){
+        //Constructor asignacion de los valores de la geometroa dela zapata
+        this.B=B;
+        this.L=L;
+        this.q=q;
+        this.z=z;
     }
 
     public double getTensionRectangular(double z){
@@ -68,5 +79,31 @@ public class cargasTerreno {
         return (q/(2*Math.PI))*(Math.atan(L*B/(z*r))-L*B*z/(r2*r2*r));
     }
 
-    
+    public double getTensionRectangularxz(double z){
+        // calculo  de la tensión normal por métodos elásticos
+        double r1=Math.sqrt(B*B+z*z);
+        double r2=Math.sqrt(L*L+z*z);
+        double r=Math.sqrt(B*B+L*L+z*z);
+
+        return (q/(2*Math.PI))*(B/r2-z*z*B/(r1*r1*r));
+    }
+    public double getTensionRectangularyz(double z){
+        // calculo  de la tensión normal por métodos elásticos
+        double r1=Math.sqrt(B*B+z*z);
+        double r2=Math.sqrt(L*L+z*z);
+        double r=Math.sqrt(B*B+L*L+z*z);
+
+        return (q/(2*Math.PI))*(L/r1-z*z*L/(r2*r1*r));
+    }
+
+    public double getTensionRectangularxy(double z){
+        // calculo  de la tensión normal por métodos elásticos
+        double r1=Math.sqrt(B*B+z*z);
+        double r2=Math.sqrt(L*L+z*z);
+        double r=Math.sqrt(B*B+L*L+z*z);
+
+        return (q/(2*Math.PI))*(1+z/r-z*(1/r1-1/r2));
+    }
+
+
 }

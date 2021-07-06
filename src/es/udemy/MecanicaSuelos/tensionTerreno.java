@@ -1,4 +1,6 @@
 // calculo de tensiones en el terreno
+// mediante métodos elásticos
+// mediante la ecuaciones de Holl
 
 package es.udemy.MecanicaSuelos;
 
@@ -44,12 +46,18 @@ public class tensionTerreno {
         cargasTerreno carga1=new cargasTerreno(B, L, q);
 
         do{ // bucle para salida de datos
-            //System.out.println("Primer método");
-            //System.out.printf("El valor de la carga a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangular(z));
-            //System.out.println("Segundo método");
+
+            // Tensiones normales
             System.out.printf("El valor de la carga en z a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularZ(z));
             System.out.printf("El valor de la carga en x a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularX(z));
             System.out.printf("El valor de la carga en y a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularY(z));
+            // Tensiones cortantes
+            System.out.printf("El valor de la carga en xz a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularxz(z));
+            System.out.printf("El valor de la carga en yz a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularyz(z));
+            System.out.printf("El valor de la carga en xy a la profundidad z=%.3f m es %.3f \n",z,carga1.getTensionRectangularxy(z));
+
+
+
             z+=incremento;
         }while (zmax+incremento>=z);
 

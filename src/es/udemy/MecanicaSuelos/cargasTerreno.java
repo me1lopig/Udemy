@@ -107,10 +107,11 @@ public class cargasTerreno {
 
     public double getAsientos(float poisson,double E){
         // Cálculo de asientos de una cimentación rectangular en la esquina
+        // se supone que el médio elástico es homogeneo, isótropo e infinito
         // para el caso de cimentación flexible
         double n=L/B;
-        // no está terminado
-        return (q*B/Math.PI)*(1-poisson*poisson);
+        // no está comprobado
+        return (q*B/(Math.PI*E))*(1-poisson*poisson)*(n*Math.log(n)*(1+Math.sqrt(n*n+1))+Math.log(n+Math.sqrt(n*n+1)));
 
     }
 

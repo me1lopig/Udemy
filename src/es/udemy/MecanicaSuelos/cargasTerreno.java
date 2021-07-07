@@ -105,5 +105,14 @@ public class cargasTerreno {
         return (q/(2*Math.PI))*(1+z/r-z*(1/r1-1/r2));
     }
 
+    public double getAsientos(float poisson,double E){
+        // Cálculo de asientos de una cimentación rectangular en la esquina
+        // para el caso de cimentación flexible
+        double n=L/B;
+        // no está terminado
+        return (q*B/Math.PI)*(1-poisson*poisson);
+
+    }
+
 
 }

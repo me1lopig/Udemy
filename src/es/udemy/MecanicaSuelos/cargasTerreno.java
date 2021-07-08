@@ -110,8 +110,8 @@ public class cargasTerreno {
         // se supone que el médio elástico es homogeneo, isótropo e infinito
         // para el caso de cimentación flexible
         double n=L/B;
-        // no está comprobado
-        return (q*B/(Math.PI*E))*(1-poisson*poisson)*(n*Math.log(n)*(1+Math.sqrt(n*n+1))+Math.log(n+Math.sqrt(n*n+1)));
+        // Cálculo del asiento en un semiespacio infinito
+        return (q*B/(Math.PI*E))*(1-poisson*poisson)*(n*Math.log(n)*(1+Math.sqrt(n*n+1))/n+Math.log(n+Math.sqrt(n*n+1)));
 
     }
 

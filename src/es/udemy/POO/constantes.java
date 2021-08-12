@@ -11,6 +11,8 @@ public class constantes {
     
 }
 
+
+
 class Empleados{
 
     public Empleados (String nombre){
@@ -27,7 +29,7 @@ class Empleados{
         return "El empleado " + nombre + " pertenece a la seccion de " + seccion;
     }
 
-
+    // propiedades de la clase
     private String nombre;
     private String seccion;
 

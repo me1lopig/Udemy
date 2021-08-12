@@ -7,11 +7,14 @@ public class constantes {
         Empleados empleado1=new Empleados("Ana");
         System.out.println(empleado1.getDatosEmpleado());
 
+        // cambiamos el departamento
+        empleado1.setSeccion("Recursos Humanos");
+        System.out.println(empleado1.getDatosEmpleado());
+
+
     }
     
 }
-
-
 
 class Empleados{
 
@@ -24,13 +27,16 @@ class Empleados{
         this.seccion=seccion;
     }
 
+  
     public String getDatosEmpleado(){
 
         return "El empleado " + nombre + " pertenece a la seccion de " + seccion;
     }
 
     // propiedades de la clase
-    private String nombre;
+    private final String nombre; // una vez declarada no se puede cambiar una vez
+    // que se declara en el constructor durante la ejeución del programa
+    // se cambia sólo una vez
     private String seccion;
 
 

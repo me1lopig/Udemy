@@ -15,6 +15,8 @@ public class constantes {
         System.out.println(empleado2.getDatosEmpleado());   
         System.out.println(empleado3.getDatosEmpleado());
 
+        System.out.println(Empleados.getIdSiguiente());
+
     }
     
 }
@@ -38,6 +40,16 @@ class Empleados{
 
         return "El empleado " + nombre + " pertenece a la seccion de " + seccion+", identificador = "+id;
     }
+
+
+public static  String getIdSiguiente(){
+
+    // método static dentro de la clase
+
+    return "El id del siguiente empleado es el  "+idSiguiente;
+}
+
+
 
     // propiedades de la clase
     private final String nombre; // una vez declarada no se puede cambiar una vez

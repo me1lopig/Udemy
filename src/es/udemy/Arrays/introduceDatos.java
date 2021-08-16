@@ -5,35 +5,27 @@ public class introduceDatos {
 
     public static void main(String[] args) {
 
-        double vector_1[]=new double[5];
         claseArray vector_2=new claseArray(5);
-
-
-        // introduc¡mos los datos en el vector local
-        for (int i=0;i<5;i++)
-        {
-            vector_1[i]=i;
-        }
-
-        // imprimimos los datos del vector local
-        for (int i=0;i<5;i++)
-        {
-            System.out.println("El valor de la posición "+i+" es "+vector_1[i]);
-        }
-
-        // trabajamos con la clase
-
-        // introduc¡mos los datos en el vector local
-        for (int i=0;i<5;i++)
-        {
-            vector_2.setIntroduceDatos(i);
-        }
-
-
-
-
-
-
-    }
+        claseArray vector_3=new claseArray(10);
     
+
+        // introduc¡mos los datos en el vector de la clase
+        for (int i=0;i<5;i++)
+        {
+            vector_2.setIntroduceDatos(i+2);
+        }
+
+        vector_2.getImprimeDatos(); // imprime todos los datos  que tenemos en el vector que hemos creados
+
+  // introduc¡mos los datos en el vector de la clase
+        for (int i=0;i<10;i++)
+        {
+            vector_3.setIntroduceDatos(i*10);
+        }
+
+        vector_3.getImprimeDatos(); // imprime todos los datos  que tenemos en el vector que hemos creados
+
+
+
+    }   
 }

@@ -21,7 +21,6 @@ public class claseArray {
         id++;
     }
 
-
     public void getImprimeDatos(){
         // imprimir los datos almacenados
         for(int i=0;i<numeroDatos;i++){

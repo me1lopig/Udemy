@@ -11,13 +11,21 @@ public class introduceDatos {
         claseArray vector_3=new claseArray(10);
     
 
-        // introduc¡mos los datos en el vector de la clase
+        // introduc¡mos los datos en el vector de datos
         for (int i=0;i<5;i++)
             {
                 vector_2.setIntroduceDatos(i+2);
             }
+     
+        // introduc¡mos los datos en el vector nombres
+        for (int i=0;i<5;i++)
+            {
+                vector_2.setIntroduceNombres("Nombre "+i);
+            }
+            
 
-        vector_2.getImprimeDatos(); // imprime todos los datos  que tenemos en el vector que hemos creados
+            vector_2.getImprimeDatos(); // imprime todos los datos  que tenemos en el vector que hemos creados
+            vector_2.getImprimeNombres(); // imprime todos los noombres  que tenemos en el vector que hemos creados
 
         // introduc¡mos los datos en el vector de la clase
         for (int i=0;i<10;i++)
@@ -25,8 +33,21 @@ public class introduceDatos {
                 vector_3.setIntroduceDatos(i*10);
             }
 
+        
+                // introduc¡mos los datos en el vector nombres
+        for (int i=0;i<10;i++)
+            {
+                vector_3.setIntroduceNombres("Nombre "+i);
+            }
+        
+        
+        
         vector_3.getImprimeDatos(); // imprime todos los datos  que tenemos en el vector que hemos creados
+        vector_3.getImprimeNombres(); // imprime todos los noombres  que tenemos en el vector que hemos creados
 
+       
+       
+       
         // sacamos datos parciales de los arrays creados
         System.out.println("primer ejemplo");
         vector_2.getImprimeDato(2);

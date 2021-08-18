@@ -55,8 +55,6 @@ public class introduceDatos {
         System.out.println("segundo ejemplo");
         vector_3.getImprimeDato(30); // este lleva un error
         
-        // imprimimos los datos totales
-        System.out.println("El numero de datos total es "+vector_2.getNumeroDatos());
 
     }   
 

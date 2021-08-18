@@ -7,6 +7,7 @@ public class claseArray {
     private int numeroDatos;
     private double datos[];
     private int id;
+    private static int control=0;
 
     public claseArray(int numeroDatos) {
     // constructor para la creacion del vector
@@ -19,6 +20,7 @@ public class claseArray {
         //Introducimos datos en el vector que se ha creado
         datos[id]=valor;
         id++;
+        control++;
     }
 
     public void getImprimeDatos(){
@@ -27,5 +29,24 @@ public class claseArray {
             System.out.println("El valor del id="+i+" es "+datos[i]);
         }         
     }
-    
+
+    public void getImprimeDato(int posicion){
+        // imprime un dato en concreto
+        // se comprueba el indice que sea menor o igual que la dimension del vector
+
+        if (posicion>id) {
+            System.out.println("El valor del indice "+ posicion+" supera a la dimensión de la matriz");
+            return;
+        }
+        System.out.println("El valor del indice "+posicion+" es "+datos[posicion]);
+
+    }   
+
+        public int getNumeroDatos(){
+            
+            // retornamos el mumero de datos introducidos en total
+            return control;
+
+        }
+
 }

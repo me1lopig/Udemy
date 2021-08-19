@@ -8,7 +8,7 @@ public class claseArray {
     private double datos[];
     private int id;
     private static int control=0;
-    private static String nombres[]; // array estatico
+    private String nombres[]; // array estatico
 
 
     public claseArray(int numeroDatos) {
@@ -20,16 +20,17 @@ public class claseArray {
     control++;
     }
 
+    // introducción de los datos 
+
    public void setIntroduceDatos(double valor){
         //Introducimos datos en el vector que se ha creado
         datos[id]=valor;
-        id++;       
+        id++;   
     }
 
     public void setIntroduceNombres(String nombre){
-        //Introducimos datos en el vector que se ha creado
-        nombres[id]=nombre;
-        id++;
+        //Introducimos los nombres en el vector 
+        nombres[id]=nombre;   
     }
 
 
@@ -62,11 +63,11 @@ public class claseArray {
 
     }   
 
-        public int getNumeroDatos(){
+        /*public int getNumeroDatos(){
 
             // retornamos el mumero de datos introducidos en total
             return control;
 
-        }
+        }*/
 
 }

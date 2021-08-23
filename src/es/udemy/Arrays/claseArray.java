@@ -26,13 +26,9 @@ public class claseArray {
         datos[id]=valor;
         nombres[0][id]=nombre;
         id++;
-        contador++;   
     }
 
 
-
-
- 
     public void getImprimeDatos(){
         // imprimir los datos almacenados
         for(int i=0;i<numeroDatos;i++){
@@ -43,11 +39,8 @@ public class claseArray {
 
 
 
-
-
-
     public void getImprimeDato(int posicion){
-        // imprime un dato en concreto
+        // imprime un dato en concreto en este caso un número y un nombre
         // se comprueba el indice que sea menor o igual que la dimension del vector
 
         if (posicion>id) {
@@ -55,6 +48,7 @@ public class claseArray {
             return;
         }
         System.out.println("El valor del indice "+posicion+" es "+datos[posicion]);
+        System.out.println("El valor del nombre  "+posicion+" es "+nombres[0][posicion]);
 
     }   
 

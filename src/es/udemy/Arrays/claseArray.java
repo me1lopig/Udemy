@@ -10,6 +10,7 @@ public class claseArray {
     private String [][] nombres; // array de nombres se pone una fila o una columna de base
 
 
+
     public claseArray(int numeroDatos) {
     // constructor para la creacion del vector
     this.numeroDatos=numeroDatos;
@@ -24,7 +25,8 @@ public class claseArray {
         //Introducimos datos en el vector que se ha creado
         datos[id]=valor;
         nombres[0][id]=nombre;
-        id++;   
+        id++;
+        contador++;   
     }
 
 
@@ -35,7 +37,7 @@ public class claseArray {
         // imprimir los datos almacenados
         for(int i=0;i<numeroDatos;i++){
             System.out.println("El valor del id="+i+" es "+datos[i]);
-            System.out.println("El valor del monbres es "+nombres[0][i]);
+            System.out.println("El nombre  es "+nombres[0][i]);
         }         
     }
 

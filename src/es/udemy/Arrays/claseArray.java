@@ -4,37 +4,44 @@ package es.udemy.Arrays;
 public class claseArray {
 
     // propiedades
-    private int numeroDatos;
-    private double datos[];
-    private int id;
-    private static int control=0;
-    private String nombres[]; // array estatico
+    private int numeroDatos; // dimensión de los arregklos
+    private double datos[]; // array de datos numericos
+    private int id; // índice de los arregos
+    private String [][] nombres; // array de nombres se pone una fila o una columna de base
 
 
     public claseArray(int numeroDatos) {
     // constructor para la creacion del vector
     this.numeroDatos=numeroDatos;
     datos=new double[numeroDatos];
-    nombres=new String [numeroDatos];
+    nombres=new String [1][numeroDatos];
     id=0;
-    control++;
     }
 
     // introducción de los datos 
 
-   public void setIntroduceDatos(double valor){
+   public void setIntroduceDatos(double valor,String nombre){
         //Introducimos datos en el vector que se ha creado
         datos[id]=valor;
+        nombres[0][id]=nombre;
         id++;   
     }
+
+
+
 
  
     public void getImprimeDatos(){
         // imprimir los datos almacenados
         for(int i=0;i<numeroDatos;i++){
             System.out.println("El valor del id="+i+" es "+datos[i]);
+            System.out.println("El valor del monbres es "+nombres[0][i]);
         }         
     }
+
+
+
+
 
 
     public void getImprimeDato(int posicion){
@@ -49,11 +56,6 @@ public class claseArray {
 
     }   
 
-        public int getNumeroDatos(){
 
-            // retornamos el mumero de datos introducidos en total
-            return control;
-
-        }
 
 }

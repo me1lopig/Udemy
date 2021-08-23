@@ -28,27 +28,13 @@ public class claseArray {
         id++;   
     }
 
-    public void setIntroduceNombres(String nombre){
-        //Introducimos los nombres en el vector 
-        nombres[id]=nombre;   
-    }
-
-
-
+ 
     public void getImprimeDatos(){
         // imprimir los datos almacenados
         for(int i=0;i<numeroDatos;i++){
             System.out.println("El valor del id="+i+" es "+datos[i]);
         }         
     }
-
-    public void getImprimeNombres(){
-        // imprimir los datos almacenados
-        for(int i=0;i<numeroDatos;i++){
-            System.out.println("El valor del id="+i+" es "+nombres[i]);
-        }         
-    }
-
 
 
     public void getImprimeDato(int posicion){
@@ -63,11 +49,11 @@ public class claseArray {
 
     }   
 
-        /*public int getNumeroDatos(){
+        public int getNumeroDatos(){
 
             // retornamos el mumero de datos introducidos en total
             return control;
 
-        }*/
+        }
 
 }

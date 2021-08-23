@@ -13,8 +13,8 @@ public class introduceDatos {
         // introduc¡mos los datos en el vector de datos
         for (int i=0;i<5;i++)
             {
-                vector_2.setIntroduceDatos(i+2);
-                vector_2.setIntroduceNombres("Nombre "+i);
+                vector_2.setIntroduceDatos(i);
+      
             }
             
 
@@ -26,7 +26,10 @@ public class introduceDatos {
         // sacamos datos parciales de los arrays creados
         System.out.println("primer ejemplo");
         vector_2.getImprimeDato(2);
-      
+
+        // sacamos el número de datos introducidos
+        System.out.println("El número de datos es "+vector_2.getNumeroDatos());
+    
 
     }   
 

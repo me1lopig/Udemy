@@ -34,15 +34,25 @@ static private int codigo =0; // código independiente de los colegios introduci
 
     public void imprimeAlumnos(){
         // sacamos por pantalla todos los alumnos que tengamos registrados
-
-        for(int i=0;i<=id;i++)
+        System.out.println("Datos de todos los alumnos");
+        for(int i=0;i<id;i++)
         {
-            System.out.println("Nombre Alumno "+listaAlumnos[0][id]);
+            System.out.println("Nombre Alumno "+listaAlumnos[0][i]);
             System.out.println("Colegio "+nombreColegio);
-            System.out.println("Número de alumno "+id);
-            System.out.println("Nota media "+notaAlumnos[id]);
+            System.out.println("Número de alumno "+i);
+            System.out.println("Nota media "+notaAlumnos[i]);
         }
     }
+
+
+    public double notaMedia(){
+        double media=0;
+        for (int i=0;i<id;i++){
+            media+=notaAlumnos[i];
+        }
+        return media/id;
+    }
+
 
     static   int getcodigoFinal(){
         // metodo estático

@@ -15,6 +15,7 @@ public class UsoColegio {
         SanJavier.nuevoAlumno("Antonio", 7.9);
         SanJavier.nuevoAlumno("Manuela", 8.3);
         SanJavier.nuevoAlumno("Juan", 6.8);
+        SanJavier.nuevoAlumno("Jorge", 7.8);
 
         // introducción de datos de los alumnos de un colegio 2
         SanJuan.nuevoAlumno("Manuel", 7.8);
@@ -24,6 +25,8 @@ public class UsoColegio {
   
 
         // obtención de los datos de todos loa alumnos incluidos
+        System.out.println("Los alumnos del colegio San Javier son ");
+        SanJavier.imprimeAlumnos();
 
         
         // obtención de un alumno en particular
@@ -34,6 +37,7 @@ public class UsoColegio {
         // imprine el código final mediante un método estático
         
         System.out.println("El código final es "+Colegio.getcodigoFinal());
+        System.out.println("La nota media del colegio San Juan es "+SanJuan.notaMedia());
 
 
     }

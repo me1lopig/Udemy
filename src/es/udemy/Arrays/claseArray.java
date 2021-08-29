@@ -8,15 +8,16 @@ public class claseArray {
     private double datos[]; // array de datos numericos
     private int id; // índice de los arregos
     private String [][] nombres; // array de nombres se pone una fila o una columna de base
+    static private int control=0; // controlamos el numero de acceso a la clase desde uno de los mñetodos
 
 
 
     public claseArray(int numeroDatos) {
-    // constructor para la creacion del vector
+    // constructor para la creacion del vector en el que introducimos los datos
     this.numeroDatos=numeroDatos;
     datos=new double[numeroDatos];
     nombres=new String [1][numeroDatos];
-    id=0;
+    id=0;  
     }
 
     // introducción de los datos 
@@ -26,10 +27,11 @@ public class claseArray {
         datos[id]=valor;
         nombres[0][id]=nombre;
         id++;
+        control++; // incrementamos contol en la variable estática
     }
 
 
-    public void getImprimeDatos(){
+    public void imprimeDatos(){
         // imprimir los datos almacenados
         for(int i=0;i<numeroDatos;i++){
             System.out.println("El valor del id="+i+" es "+datos[i]);
@@ -39,7 +41,7 @@ public class claseArray {
 
 
 
-    public void getImprimeDato(int posicion){
+    public void imprimeDato(int posicion){
         // imprime un dato en concreto en este caso un número y un nombre
         // se comprueba el indice que sea menor o igual que la dimension del vector
 
@@ -52,6 +54,8 @@ public class claseArray {
 
     }   
 
-
+    public void imprimeAcceso(){
+        System.out.println("El número de acceso es "+control);
+    }
 
 }
